@@ -1,14 +1,13 @@
 import './App.css'
-import Navbar from './components/Navbar'
-import Tablelist from './components/Tablelist'
+import NavBar from './components/NavBar'
+import TableList from './components/TableList'
 
 function App() {
   
-
   return (
     <>
-     <Navbar />
-     <Tablelist />
+     <NavBar />
+     <TableList />
     </>
   )
 }

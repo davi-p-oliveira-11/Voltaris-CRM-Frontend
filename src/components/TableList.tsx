@@ -1,5 +1,14 @@
-export default function Tablelist() {
-  const clients = [
+export default function TableList() {
+  interface Client {
+    id: number;
+    name: string;
+    email: string;
+    job: string;
+    rate: string; // or i may change into number type
+    isActive: boolean;
+  }
+
+  const clients: Client[] = [
     {
       id: 1,
       name: "John Doe",
@@ -22,7 +31,7 @@ export default function Tablelist() {
       email: "john2.doe@gmail.com",
       job: "Developer2",
       rate: "102",
-      isActive: true,
+      isActive: false,
     },
   ];
 
@@ -52,14 +61,20 @@ export default function Tablelist() {
                 <td>{client.job}</td>
                 <td>{client.rate}</td>
                 <td>
-                  <button className={`btn rounded-full w-20 ${client.isActive ? `btn-primary` : `btn-outline btn-primary`}`}>
-                    {client.isActive ? 'Active' : 'Inactive'}
+                  <button
+                    className={`btn rounded-full w-20 ${
+                      client.isActive
+                        ? `btn-primary`
+                        : `btn-outline btn-primary`
+                    }`}
+                  >
+                    {client.isActive ? "Active" : "Inactive"}
                   </button>
                 </td>
                 <td>
                   <button className="btn btn-secondary"> Update </button>
                 </td>
-                 <td>
+                <td>
                   <button className="btn btn-accent"> Delete </button>
                 </td>
               </tr>

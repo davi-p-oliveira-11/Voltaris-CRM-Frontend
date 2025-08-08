@@ -1,4 +1,4 @@
-export default function Navbar() {
+export default function NavBar() {
   return (
     <>
       <div className="navbar bg-base-100 p-4">
